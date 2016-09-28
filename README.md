@@ -1,7 +1,7 @@
 ## 微信小程序的IDE用了reactjs + flux的架构  
 可以分析它的源码学习这套框架  
 首先非常感谢 https://github.com/gavinkwoe/weapp-ide-crack 的作者gavinkwoe的这个项目  
-上方的破解文件的使用方法可以参考gavinkwoe项目的说明文件，如果觉得麻烦，而且你也正巧用的mac，可以直接下载我传到百度云上的调度器直接使用：https://pan.baidu.com/s/1pL6Kysb ，版本 0.9.092300  
+上方的破解文件的使用方法可以参考gavinkwoe项目的说明文件，如果觉得麻烦，而且你也正巧用的mac，可以直接下载我传到百度云上的软件直接使用：https://pan.baidu.com/s/1pL6Kysb ，版本 0.9.092300  
 
 刚开始的时候，也是用的他的文件来破解，不过发现了个问题：  
 **创建的项目没有生成demo文件**  
