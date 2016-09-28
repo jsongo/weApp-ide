@@ -22,7 +22,20 @@ init: function() {
 
 本项目文件的使用方法可以参数 https://github.com/gavinkwoe/weapp-ide-crack   
 破解方式我自己重新折腾了一遍，有些地方跟gavinkwoe不太一样，不过都是可以正常运行的。  
-后续还会更新更多的api的破解方式，欢迎大家持续关注  
+版本 0.9.092300 (0.9.092300) 测试过，可以正常使用。
 
+** 几个问题说明 **
+1. MaxRequestConcurrent报错的问题  
+这个在本项目的破解文件里已经直接覆盖了，不会报这个错了。  
+（修改：asdebug.js里，搜MaxRequestConcurrent，很简单，直接把它设置成固定数字即可）  
+
+2. demo中点击头像会出现route错误的问题
+用本项目的方法，生成的demo中，已经解决了这个问题  
+
+3. Failed to load resource: net::ERR_NAME_NOT_RESOLVED  
+这个问题gavinkwoe的项目中也说明了，主要是由于代理导致的，打开ide，菜单上选“动作”->“设置”，选直连就行
+
+
+后续还会更新更多的api的破解方式，欢迎大家持续关注  
 
 更多的微信小程序api，可以参考原官方文档：https://mp.weixin.qq.com/debug/wxadoc/dev/api/open.html  
