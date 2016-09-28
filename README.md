@@ -40,6 +40,9 @@ init: function() {
 3. Failed to load resource: net::ERR_NAME_NOT_RESOLVED  
 这个问题gavinkwoe的项目中也说明了，主要是由于代理导致的，打开ide，菜单上选“动作”->“设置”，选直连就行
 
+<p align="center">
+<img src="preview.jpg" alt="预览" width="400"/>
+</p>
 
 后续还会更新更多的api的破解方式，欢迎大家持续关注  
 
