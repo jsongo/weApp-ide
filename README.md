@@ -1,6 +1,9 @@
 ## 微信小程序的IDE用了reactjs + flux的架构  
 可以分析它的源码学习这套框架  
-首先非常感谢：https://github.com/gavinkwoe/weapp-ide-crack 的作者gavinkwoe的这个项目，刚开始的时候，也是用的他的文件来破解，不过发现了个问题：  
+首先非常感谢 https://github.com/gavinkwoe/weapp-ide-crack 的作者gavinkwoe的这个项目  
+上方的破解文件的使用方法可以参考gavinkwoe项目的说明文件，如果觉得麻烦，而且你也正巧用的mac，可以直接下载我传到百度云上的调度器直接使用：https://pan.baidu.com/s/1pL6Kysb ，版本 0.9.092300  
+
+刚开始的时候，也是用的他的文件来破解，不过发现了个问题：  
 **创建的项目没有生成demo文件**  
 于是把整个代码大概浏览了一遍，自己重新折腾了下。（因为之前写过react + flux的代码，所以对这个项目的结构非常熟悉。）  
 上面这个问题主要是一个参数，在createstep.js里的addProject函数中，最后一句在执行add方法的时候，第二个参数是needInitQuickStart（在actions/projectActions.js里有说明）表示是否需要创建项目文件，这个要显示的设置为true才会创建。  
@@ -20,7 +23,6 @@ init: function() {
 ```
 然后在`onLaunch`里调用一下init()就ok  
 
-本项目文件的使用方法可以参数 https://github.com/gavinkwoe/weapp-ide-crack   
 破解方式我自己重新折腾了一遍，有些地方跟gavinkwoe不太一样，不过都是可以正常运行的。  
 版本 0.9.092300 (0.9.092300) 测试过，可以正常使用。
 
