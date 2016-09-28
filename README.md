@@ -24,12 +24,13 @@ init: function() {
 破解方式我自己重新折腾了一遍，有些地方跟gavinkwoe不太一样，不过都是可以正常运行的。  
 版本 0.9.092300 (0.9.092300) 测试过，可以正常使用。
 
-** 几个问题说明 **
+**几个问题说明**  
+
 1. MaxRequestConcurrent报错的问题  
 这个在本项目的破解文件里已经直接覆盖了，不会报这个错了。  
 （修改：asdebug.js里，搜MaxRequestConcurrent，很简单，直接把它设置成固定数字即可）  
 
-2. demo中点击头像会出现route错误的问题
+2. demo中点击头像会出现route错误的问题  
 用本项目的方法，生成的demo中，已经解决了这个问题  
 
 3. Failed to load resource: net::ERR_NAME_NOT_RESOLVED  
