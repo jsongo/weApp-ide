@@ -32,8 +32,8 @@ init: function() {
 
 另外，最近也在编写一些小程序的教程：  
 > 《[【微信小程序开发•系列文章一】入门](http://www.jsongo.com/post/js/2016/weapp-1/)》  
-> 《【微信小程序开发•系列文章二】视图层(http://www.jsongo.com/post/js/2016/weapp-2/)》  
-> 《【微信小程序开发•系列文章三】数据层(http://www.jsongo.com/post/js/2016/weapp-3/)》  
+> 《[【微信小程序开发•系列文章二】视图层](http://www.jsongo.com/post/js/2016/weapp-2/)》  
+> 《[【微信小程序开发•系列文章三】数据层](http://www.jsongo.com/post/js/2016/weapp-3/)》  
 
 
 **几个问题说明**  
