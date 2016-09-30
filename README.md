@@ -1,7 +1,7 @@
 ## 微信小程序的IDE用了reactjs + flux的架构  
 可以分析它的源码学习这套框架  
 首先非常感谢 https://github.com/gavinkwoe/weapp-ide-crack 的作者gavinkwoe的这个项目  
-上方的破解文件的使用方法可以参考gavinkwoe项目的说明文件，如果觉得麻烦，而且你也正巧用的mac，可以直接下载我传到百度云上的调度器直接使用：https://pan.baidu.com/s/1pL6Kysb ，版本 0.9.092300  
+上方的破解文件的使用方法可以参考gavinkwoe项目的说明文件，如果觉得麻烦，而且你也正巧用的mac，可以直接下载我传到百度云上的软件直接使用：https://pan.baidu.com/s/1pL6Kysb ，版本 0.9.092300  
 
 刚开始的时候，也是用的他的文件来破解，不过发现了个问题：  
 **创建的项目没有生成demo文件**  
@@ -26,7 +26,11 @@ init: function() {
 
 本项目文件的使用方法可以参考 https://github.com/gavinkwoe/weapp-ide-crack   
 破解方式我自己重新折腾了一遍，有些地方跟gavinkwoe不太一样，不过都是可以正常运行的。  
-版本 0.9.092300 (0.9.092300) 测试过，可以正常使用。
+版本 0.9.092300 (0.9.092300) 测试过，可以正常使用。  
+
+另外，最近也在编写一些小程序的教程：  
+> 《[【微信小程序开发•系列文章一】入门](http://www.jsongo.com/post/js/2016/weapp-1/)》  
+
 
 **几个问题说明**  
 
@@ -34,12 +38,15 @@ init: function() {
 这个在本项目的破解文件里已经直接覆盖了，不会报这个错了。  
 （修改：asdebug.js里，搜MaxRequestConcurrent，很简单，直接把它设置成固定数字即可）  
 
-2. demo中点击头像会出现route错误的问题  
-用本项目的方法，生成的demo中，已经解决了这个问题  
+2. 页面切换时会出现route错误的问题  
+这个可能是开发工作自身的bug，用一段时间后就会这样，目前还没发现原因，不过解决这个问题很简单，关掉，重新再开就好了。    
 
 3. Failed to load resource: net::ERR_NAME_NOT_RESOLVED  
 这个问题gavinkwoe的项目中也说明了，主要是由于代理导致的，打开ide，菜单上选“动作”->“设置”，选直连就行
 
+<p align="center">
+<img src="preview.jpg" alt="预览" width="400"/>
+</p>
 
 后续还会更新更多的api的破解方式，欢迎大家持续关注  
 
