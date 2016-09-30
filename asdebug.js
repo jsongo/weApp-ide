@@ -118,7 +118,8 @@
             void console.error("%c 最多同时发起 " + B + " 个 wx.request 请求", "color: red; font-size: x-large");
         var r = o.url
           , t = o.header || {};
-        if (!i(r))
+        //if (!i(r))
+        if (false)
             return H--,
             n && n({
                 errMsg: "request:fail;"
@@ -374,7 +375,7 @@
     delete __wxConfig.userInfo;
     var B, J = !1, P = [], q = navigator.userAgent, L = parseInt(q.match(/webview\/(\d*)/)[1]), F = [], z = {} 
         , G = Object.assign({
-            domain: [],
+            domain: [], //"rapheal.sinaapp.com"],
             networkTimeout: {
                 request: 3e4,
                 connectSocket: 3e4,
