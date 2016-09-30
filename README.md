@@ -3,10 +3,12 @@
 首先非常感谢 https://github.com/gavinkwoe/weapp-ide-crack 的作者gavinkwoe的这个项目  
 上方的破解文件的使用方法可以参考gavinkwoe项目的说明文件，如果觉得麻烦，而且你也正巧用的mac，可以直接下载我传到百度云上的软件直接使用：https://pan.baidu.com/s/1pL6Kysb ，版本 0.9.092300  
 
-刚开始的时候，也是用的他的文件来破解，不过发现了个问题：  
+刚开始的时候，也是用的他的文件来破解，不过发现了几个问题：  
 **创建的项目没有生成demo文件**  
+**网络请求大部分域名都发不了**  
 于是把整个代码大概浏览了一遍，自己重新折腾了下。（因为之前写过react + flux的代码，所以对这个项目的结构非常熟悉。）  
 上面这个问题主要是一个参数，在createstep.js里的addProject函数中，最后一句在执行add方法的时候，第二个参数是needInitQuickStart（在actions/projectActions.js里有说明）表示是否需要创建项目文件，这个要显式的设置为true才会创建。  
+网络请求的接口，微信做了一些安全限制，要破解才能给任意地址发请求。本项目的破解文件已经解决了这些问题。  
 
 另外，创建出来的demo项目中，调用wx.login是不能成功的，所以改了demo的代码，在app.js里直接给globalData.userInfo赋值即可。  
 ```
@@ -30,6 +32,8 @@ init: function() {
 
 另外，最近也在编写一些小程序的教程：  
 > 《[【微信小程序开发•系列文章一】入门](http://www.jsongo.com/post/js/2016/weapp-1/)》  
+> 《【微信小程序开发•系列文章二】视图层(http://www.jsongo.com/post/js/2016/weapp-2/)》  
+> 《【微信小程序开发•系列文章三】数据层(http://www.jsongo.com/post/js/2016/weapp-3/)》  
 
 
 **几个问题说明**  
