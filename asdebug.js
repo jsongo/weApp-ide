@@ -202,7 +202,9 @@
     function p(e, o, n) {
         var r = o.url
           , t = o.header;
-        if (!i(r, "webscoket"))
+        //if (!i(r, "webscoket"))
+        console.log('skip check');
+        if (false)
             return n && n({
                 errMsg: "closeSocket:fail"
             }),
