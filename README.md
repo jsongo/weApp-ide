@@ -1,9 +1,21 @@
 ## 微信小程序的IDE用了reactjs + flux的架构  
 可以分析它的源码学习这套框架  
 首先非常感谢 https://github.com/gavinkwoe/weapp-ide-crack 的作者gavinkwoe的这个项目  
-上方的破解文件的使用方法可以参考gavinkwoe项目的说明文件，如果觉得麻烦，而且你也正巧用的mac，可以直接下载我传到百度云上的软件直接使用：https://pan.baidu.com/s/1dFl0Pw9 ，版本 0.9.092300  
+破解方式：把相应的文件做个替换就行。  
+mac上：
+找到开发工具的程序，右击“显示包内容”：  
+Resources/app.nw/app/dist/components/create/createstep.js  
+Resources/app.nw/app/dist/stores/projectStores.js  
+Resources/app.nw/app/dist/weapp/appservice/asdebug.js  
+window上：  
+安装完后，一般是放在这个目录里：C:\Program Files (x86)\Tencent\微信web开发者工具  
+找到相应文件再替换：  
+package.nw/app/dist/components/create/createstep.js  
+package.nw/app/dist/stores/projectStores.js  
+package.nw/app/dist/weapp/appservice/asdebug.js  
+如果觉得麻烦，而且你也正巧用的mac，可以直接下载我传到百度云上的软件直接使用：https://pan.baidu.com/s/1dFl0Pw9 ，版本 0.9.092300  
 
-刚开始的时候，也是用的他的文件来破解，不过发现了几个问题：  
+刚开始的时候，也是用gavinkwoe的文件来破解，不过发现了几个问题：  
 **创建的项目没有生成demo文件**  
 **网络请求大部分域名都发不了**  
 于是把整个代码大概浏览了一遍，自己重新折腾了下。（因为之前写过react + flux的代码，所以对这个项目的结构非常熟悉。）  
@@ -34,12 +46,11 @@ init: function() {
 > 《[【微信小程序开发•系列文章一】入门](http://www.jsongo.com/post/js/2016/weapp-1/)》  
 > 《[【微信小程序开发•系列文章二】视图层](http://www.jsongo.com/post/js/2016/weapp-2/)》  
 > 《[【微信小程序开发•系列文章三】数据层](http://www.jsongo.com/post/js/2016/weapp-3/)》  
-
-正在编写中的章节：
+> 《[【微信小程序开发•系列文章七】websocket](http://www.jsongo.com/post/js/2016/weapp-7/)》
+正在编写中的章节：  
 《【微信小程序开发•系列文章四】模块化》  
 《【微信小程序开发•系列文章五】主界面》  
-《【微信小程序开发•系列文章六】生命周期和路由》  
-《[【微信小程序开发•系列文章七】websocket](http://www.jsongo.com/post/js/2016/weapp-7/)》  
+《【微信小程序开发•系列文章六】生命周期和路由》    
 《【微信小程序开发•系列文章八】常用组件》  
 
 
