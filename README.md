@@ -13,7 +13,7 @@ window上：
 package.nw/app/dist/components/create/createstep.js  
 package.nw/app/dist/stores/projectStores.js  
 package.nw/app/dist/weapp/appservice/asdebug.js  
-如果觉得麻烦，而且你也正巧用的mac，可以直接下载我传到百度云上的软件直接使用：https://pan.baidu.com/s/1dFl0Pw9 ，版本 v0.10.101100  
+如果觉得麻烦，而且你也正巧用的mac，可以直接下载我传到百度云上的软件直接使用：https://pan.baidu.com/s/1dEATgkx ，版本 v0.10.101100  
 
 刚开始的时候，也是用gavinkwoe的文件来破解，不过发现了几个问题：  
 **创建的项目没有生成demo文件**  
