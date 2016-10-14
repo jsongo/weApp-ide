@@ -13,7 +13,7 @@ window上：
 package.nw/app/dist/components/create/createstep.js  
 package.nw/app/dist/stores/projectStores.js  
 package.nw/app/dist/weapp/appservice/asdebug.js  
-如果觉得麻烦，而且你也正巧用的mac，可以直接下载我传到百度云上的软件直接使用：https://pan.baidu.com/s/1dFl0Pw9 ，版本 0.9.092300  
+如果觉得麻烦，而且你也正巧用的mac，可以直接下载我传到百度云上的软件直接使用：https://pan.baidu.com/s/1dFl0Pw9 ，版本 v0.10.101100  
 
 刚开始的时候，也是用gavinkwoe的文件来破解，不过发现了几个问题：  
 **创建的项目没有生成demo文件**  
@@ -40,13 +40,13 @@ init: function() {
 
 本项目文件的使用方法可以参考 https://github.com/gavinkwoe/weapp-ide-crack   
 破解方式我自己重新折腾了一遍，有些地方跟gavinkwoe不太一样，不过都是可以正常运行的。  
-版本 0.9.092300 (0.9.092300) 测试过，可以正常使用。  
+版本 v0.10.101100 测试过，可以正常使用。  
 
 另外，最近也在编写一些小程序的教程：  
 > 《[【微信小程序开发•系列文章一】入门](http://www.jsongo.com/post/js/2016/weapp-1/)》  
 > 《[【微信小程序开发•系列文章二】视图层](http://www.jsongo.com/post/js/2016/weapp-2/)》  
 > 《[【微信小程序开发•系列文章三】数据层](http://www.jsongo.com/post/js/2016/weapp-3/)》  
-> 《[【微信小程序开发•系列文章七】websocket](http://www.jsongo.com/post/js/2016/weapp-7/)》
+> 《[【微信小程序开发•系列文章七】websocket](http://www.jsongo.com/post/js/2016/weapp-7/)》  
 正在编写中的章节：  
 《【微信小程序开发•系列文章四】模块化》  
 《【微信小程序开发•系列文章五】主界面》  
