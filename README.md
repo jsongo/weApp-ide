@@ -2,11 +2,13 @@
 可以分析它的源码学习这套框架  
 首先非常感谢 https://github.com/gavinkwoe/weapp-ide-crack 的作者gavinkwoe的这个项目  
 破解方式：把相应的文件做个替换就行。  
-mac上：
+
+mac上：  
 找到开发工具的程序，右击“显示包内容”：  
 Resources/app.nw/app/dist/components/create/createstep.js  
 Resources/app.nw/app/dist/stores/projectStores.js  
 Resources/app.nw/app/dist/weapp/appservice/asdebug.js  
+
 window上：  
 安装完后，一般是放在这个目录里：C:\Program Files (x86)\Tencent\微信web开发者工具  
 找到相应文件再替换：  
