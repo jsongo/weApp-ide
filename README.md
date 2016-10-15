@@ -13,13 +13,42 @@ window上：
 package.nw/app/dist/components/create/createstep.js  
 package.nw/app/dist/stores/projectStores.js  
 package.nw/app/dist/weapp/appservice/asdebug.js  
-如果觉得麻烦，而且你也正巧用的mac，可以直接下载我传到百度云上的软件直接使用：https://pan.baidu.com/s/1dEATgkx ，版本 v0.10.101100  
+如果觉得麻烦，而且你也正巧用的mac，可以直接下载我传到百度云上的软件直接使用：https://pan.baidu.com/s/1dEATgkx ，版本 v0.10.101400  
+ 
+破解的时候，把整个代码大概浏览了一遍，自己折腾了下。（因为之前写过react + flux的代码，所以对这个项目的结构非常熟悉。）  
+主要的修改，如果你有兴趣可以浏览下：
+1、asdebug.js修改  
+（1）搜索“URL 域名不合法，请在 mp 后台配置后重试”  
+把这句代码前端的那个if改成if(false)就可以了  
+这个主要是为了去掉安全域名的限制  
+（2）搜索“URL 域名不合法，请在 mp 后台配置后，重启项目继续测试”
+跟上面一样，把前面if改成if(false)  
+这个修改主要是为了去掉websocket的安全名限制  
+（3）搜索“__wxConfig.isTourist”，把它改成false  
+这个修改是为了去掉游客身份。  
 
-刚开始的时候，也是用gavinkwoe的文件来破解，不过发现了几个问题：  
-**创建的项目没有生成demo文件**  
-**网络请求大部分域名都发不了**  
-于是把整个代码大概浏览了一遍，自己重新折腾了下。（因为之前写过react + flux的代码，所以对这个项目的结构非常熟悉。）  
-上面这个问题主要是一个参数，在createstep.js里的addProject函数中，最后一句在执行add方法的时候，第二个参数是needInitQuickStart（在actions/projectActions.js里有说明）表示是否需要创建项目文件，这个要显式的设置为true才会创建。  
+2、projectStores.js  
+（1）搜索“setProjectConfig:function” 这个函数的定义  
+把“i = e.isTourist”（不一定是i和e，不同的js格式化工具可能会有不一样的结果）这一小段注释掉，把下方的第一个if(i) { ... }整块注释掉。  
+这一个用来判断是否是游客身份，是的话直接返回。但我们不想只是游客身份，所以这里我们不能让它返回，整个注释掉就行了。  
+（2）在上面这个函数从上往下找try catch，把找到的第一个整块注释掉
+然后把它下方的第一个if改成if(true)，if里的第一行var赋值语句的等号后面直接改成{}，空object。  
+因为我们在创建项目时随便填appid，所以网络请求返回肯定是error，这里的JSON.parse结果在if里是通不过的。我们把这一整段注释掉，不去管网络返回的error。进if后会在本地存储新建项目的信息。  
+这个地方的修改比较复杂，截图如下：  
+<p align="center">
+<img src="res/projectStores.jpg" alt="预览" width="700"/>
+</p>  
+
+3、createstep.js
+（1）搜索“当前开发者未绑定此 appid”  
+把第一个if及周边的东西都注释掉，只执行下一个if。  
+这个地方是创建的时候，返回用户信息的地方，上面说过我们创建时返回的肯定是error，所以这里自然也拿不到用户信息，反而是一个用户appId错误提示，所以这里我们动点手脚，把这个判断都注释掉，让它只执行用户信息返回的成功代码，同时我们创建一个假的用户信息object。  
+这个修改比较复杂，截图如下：  
+<p align="center">
+<img src="res/createstep.jpg" alt="预览" width="700"/>
+</p>  
+
+
 网络请求的接口，微信做了一些安全限制，要破解才能给任意地址发请求。websocket的接口也是一样。本项目的破解文件已经解决了这些问题。  
 
 另外，创建出来的demo项目中，调用wx.login是不能成功的，所以改了demo的代码，在app.js里直接给globalData.userInfo赋值即可。  
@@ -67,7 +96,7 @@ init: function() {
 这个问题gavinkwoe的项目中也说明了，主要是由于代理导致的，打开ide，菜单上选“动作”->“设置”，选直连就行
 
 <p align="center">
-<img src="preview.jpg" alt="预览" width="400"/>
+<img src="res/preview.jpg" alt="预览" width="400"/>
 </p>
 
 后续还会更新更多的api的破解方式，欢迎大家持续关注  
