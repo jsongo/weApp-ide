@@ -1,14 +1,26 @@
 ## 微信小程序的IDE用了reactjs + flux的架构  
 可以分析它的源码学习这套框架  
 首先非常感谢 https://github.com/gavinkwoe/weapp-ide-crack 的作者gavinkwoe的这个项目  
-上方的破解文件的使用方法可以参考gavinkwoe项目的说明文件，如果觉得麻烦，而且你也正巧用的mac，可以直接下载我传到百度云上的软件直接使用：https://pan.baidu.com/s/1pL6Kysb ，版本 0.9.092300  
+破解方式：把相应的文件做个替换就行。  
+mac上：
+找到开发工具的程序，右击“显示包内容”：  
+Resources/app.nw/app/dist/components/create/createstep.js  
+Resources/app.nw/app/dist/stores/projectStores.js  
+Resources/app.nw/app/dist/weapp/appservice/asdebug.js  
+window上：  
+安装完后，一般是放在这个目录里：C:\Program Files (x86)\Tencent\微信web开发者工具  
+找到相应文件再替换：  
+package.nw/app/dist/components/create/createstep.js  
+package.nw/app/dist/stores/projectStores.js  
+package.nw/app/dist/weapp/appservice/asdebug.js  
+如果觉得麻烦，而且你也正巧用的mac，可以直接下载我传到百度云上的软件直接使用：https://pan.baidu.com/s/1dEATgkx ，版本 v0.10.101100  
 
-刚开始的时候，也是用的他的文件来破解，不过发现了几个问题：  
+刚开始的时候，也是用gavinkwoe的文件来破解，不过发现了几个问题：  
 **创建的项目没有生成demo文件**  
 **网络请求大部分域名都发不了**  
 于是把整个代码大概浏览了一遍，自己重新折腾了下。（因为之前写过react + flux的代码，所以对这个项目的结构非常熟悉。）  
 上面这个问题主要是一个参数，在createstep.js里的addProject函数中，最后一句在执行add方法的时候，第二个参数是needInitQuickStart（在actions/projectActions.js里有说明）表示是否需要创建项目文件，这个要显式的设置为true才会创建。  
-网络请求的接口，微信做了一些安全限制，要破解才能给任意地址发请求。本项目的破解文件已经解决了这些问题。  
+网络请求的接口，微信做了一些安全限制，要破解才能给任意地址发请求。websocket的接口也是一样。本项目的破解文件已经解决了这些问题。  
 
 另外，创建出来的demo项目中，调用wx.login是不能成功的，所以改了demo的代码，在app.js里直接给globalData.userInfo赋值即可。  
 ```
@@ -28,18 +40,17 @@ init: function() {
 
 本项目文件的使用方法可以参考 https://github.com/gavinkwoe/weapp-ide-crack   
 破解方式我自己重新折腾了一遍，有些地方跟gavinkwoe不太一样，不过都是可以正常运行的。  
-版本 0.9.092300 (0.9.092300) 测试过，可以正常使用。  
+版本 v0.10.101100 测试过，可以正常使用。  
 
 另外，最近也在编写一些小程序的教程：  
 > 《[【微信小程序开发•系列文章一】入门](http://www.jsongo.com/post/js/2016/weapp-1/)》  
 > 《[【微信小程序开发•系列文章二】视图层](http://www.jsongo.com/post/js/2016/weapp-2/)》  
 > 《[【微信小程序开发•系列文章三】数据层](http://www.jsongo.com/post/js/2016/weapp-3/)》  
-
-正在编写中的章节：
+> 《[【微信小程序开发•系列文章七】websocket](http://www.jsongo.com/post/js/2016/weapp-7/)》  
+正在编写中的章节：  
 《【微信小程序开发•系列文章四】模块化》  
 《【微信小程序开发•系列文章五】主界面》  
-《【微信小程序开发•系列文章六】生命周期和路由》  
-《【微信小程序开发•系列文章七】websocket》  
+《【微信小程序开发•系列文章六】生命周期和路由》    
 《【微信小程序开发•系列文章八】常用组件》  
 
 
