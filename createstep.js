@@ -104,7 +104,6 @@ function init() {
                 url:s.createWeappURL + "?appid=" + n,
                 needToken:1
             }, function(r, s, o) {
-                r = 0;
                 if (r) c.error("createstep.js create  " + r.toString()), t.setState({
                     showLoading:!1
                 }), e(r.toString()); else {
@@ -115,10 +114,11 @@ function init() {
                     var u = {
                         is_admin: true,
                         app_head_img: 'http://wx.qlogo.cn/mmopen/icSHGibMIMB82jDEHibGFA1s6dhwMibWrQAPeRvT2w2y2rpZVM5l3BftVEr3rTgX4fXDlznnMmZY0zYtgkfFw7L3o9r0tTblGTxB/0'
-                    };
+                    }                    
                     //if (b === p.DEV_App_Not_Band) return e("当前开发者未绑定此 appid ，请到 mp 后台操作后重试"), nw.Shell.openExternal("https://mp.weixin.qq.com/"), 
                     //void c.error("createstep.js create project error " + b);
                     //if (0 === b) {
+                    if (true) {
                         var E = u.app_head_img ? u.app_head_img + "/0" :"";
                         return f = {
                             appid:n,
@@ -128,8 +128,11 @@ function init() {
                             app_head_img:E,
                             is_admin:u.is_admin,
                             isTourist:!1
-                        }, (m.add(f, true), i("project_createsuc", n), t.setState(g), t.props.goMain(f));
-                    //}
+                        }, void (t.state.verify ? l.addVerifyProject(f, function(a) {
+                            return a ? (e(a.toString()), void c.error("createstep.js addVerifyProject error " + a.toString())) :(t.setState(g), 
+                            void t.props.goMain(f));
+                        }) :(m.add(f, v), i("project_createsuc", n), t.setState(g), t.props.goMain(f)));
+                    }
                     //var N = o || "系统错误";
                     //e(N);
                 }
