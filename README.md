@@ -15,8 +15,9 @@ package.nw/app/dist/stores/projectStores.js
 package.nw/app/dist/weapp/appservice/asdebug.js  
 如果觉得麻烦，而且你也正巧用的mac，可以直接下载我传到百度云上的软件直接使用：https://pan.baidu.com/s/1dEATgkx ，版本 v0.10.101400  
  
-破解的时候，把整个代码大概浏览了一遍，自己折腾了下。（因为之前写过react + flux的代码，所以对这个项目的结构非常熟悉。）  
-主要的修改，如果你有兴趣可以浏览下：
+破解的时候，把整个代码大概浏览了一遍，自己折腾了下。（因为之前写过react + flux的代码，所以对这个项目的结构非常熟悉。）   
+
+主要的修改，如果你有兴趣可以浏览下：  
 1、asdebug.js修改  
 （1）搜索“URL 域名不合法，请在 mp 后台配置后重试”  
 把这句代码前端的那个if改成if(false)就可以了  
@@ -39,7 +40,7 @@ package.nw/app/dist/weapp/appservice/asdebug.js
 <img src="res/projectStores.jpg" alt="预览" width="700"/>
 </p>  
 
-3、createstep.js
+3、createstep.js  
 （1）搜索“当前开发者未绑定此 appid”  
 把第一个if及周边的东西都注释掉，只执行下一个if。  
 这个地方是创建的时候，返回用户信息的地方，上面说过我们创建时返回的肯定是error，所以这里自然也拿不到用户信息，反而是一个用户appId错误提示，所以这里我们动点手脚，把这个判断都注释掉，让它只执行用户信息返回的成功代码，同时我们创建一个假的用户信息object。  
