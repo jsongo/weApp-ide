@@ -1,6 +1,5 @@
 ## 微信小程序的IDE用了reactjs + flux的架构  
-可以分析它的源码学习这套框架  
-首先非常感谢 https://github.com/gavinkwoe/weapp-ide-crack 的作者gavinkwoe的这个项目  
+可以分析它的源码学习这套框架   
 破解方式：把相应的文件做个替换就行。  
 
 mac上：  
@@ -69,10 +68,6 @@ init: function() {
 ```
 然后在`onLaunch`里调用一下init()就ok  
 
-
-本项目文件的使用方法可以参考 https://github.com/gavinkwoe/weapp-ide-crack   
-破解方式我自己重新折腾了一遍，有些地方跟gavinkwoe不太一样，不过都是可以正常运行的。  
-版本 v0.10.101100 测试过，可以正常使用。  
 
 另外，最近也在编写一些小程序的教程：  
 > 《[【微信小程序开发•系列文章一】入门](http://www.jsongo.com/post/js/2016/weapp-1/)》  
