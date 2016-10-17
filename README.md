@@ -73,11 +73,11 @@ init: function() {
 > 《[【微信小程序开发•系列文章一】入门](http://www.jsongo.com/post/js/2016/weapp-1/)》  
 > 《[【微信小程序开发•系列文章二】视图层](http://www.jsongo.com/post/js/2016/weapp-2/)》  
 > 《[【微信小程序开发•系列文章三】数据层](http://www.jsongo.com/post/js/2016/weapp-3/)》  
+> 《[【微信小程序开发•系列文章四】模块化](http://www.jsongo.com/post/js/2016/weapp-4/)》  
+> 《[【微信小程序开发•系列文章六】生命周期和路由](http://www.jsongo.com/post/js/2016/weapp-6/)》    
 > 《[【微信小程序开发•系列文章七】websocket](http://www.jsongo.com/post/js/2016/weapp-7/)》  
 正在编写中的章节：  
-《【微信小程序开发•系列文章四】模块化》  
 《【微信小程序开发•系列文章五】主界面》  
-《【微信小程序开发•系列文章六】生命周期和路由》    
 《【微信小程序开发•系列文章八】常用组件》  
 
 
