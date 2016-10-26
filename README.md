@@ -7,6 +7,7 @@ mac上：
 Resources/app.nw/app/dist/components/create/createstep.js  
 Resources/app.nw/app/dist/stores/projectStores.js  
 Resources/app.nw/app/dist/weapp/appservice/asdebug.js  
+Resources/app.nw/app/dist/common/assdk/storageSdk.js  
 
 window上：  
 安装完后，一般是放在这个目录里：C:\Program Files (x86)\Tencent\微信web开发者工具  
@@ -30,12 +31,12 @@ package.nw/app/dist/weapp/appservice/asdebug.js
 这个修改是为了去掉游客身份。  
 
 2、projectStores.js  
-（1）搜索“setProjectConfig:function” 这个函数的定义  
+（1）搜索“setProjectConfig: function” 这个函数的定义  
 把“i = e.isTourist”（不一定是i和e，不同的js格式化工具可能会有不一样的结果）这一小段注释掉，把下方的第一个if(i) { ... }整块注释掉。  
 这一个用来判断是否是游客身份，是的话直接返回。但我们不想只是游客身份，所以这里我们不能让它返回，整个注释掉就行了。  
 （2）在上面这个函数从上往下找try catch，把找到的第一个整块注释掉
-然后把它下方的第一个if改成if(true)，if里的第一行var赋值语句的等号后面直接改成{}，空object。  
-因为我们在创建项目时随便填appid，所以网络请求返回肯定是error，这里的JSON.parse结果在if里是通不过的。我们把这一整段注释掉，不去管网络返回的error。进if后会在本地存储新建项目的信息。  
+然后把它下方的第一个if改成if(true)，if里的第一行var赋值语句的等号后面直接改成{Setting: {MaxLocalstorageSize: 10}}，因为在dist/common/assdk/storageSdk.js里有对这个值的引用，如果这里没有设置这个MaxLocalstorageSize的话，wx.setStorage会保存失败，wx.setStorageSync会报错。  
+另外这里设置成if(true)是因为我们在创建项目时随便填appid，所以网络请求返回肯定是error，这里的JSON.parse结果在if里是通不过的。我们把这一整段注释掉，不去管网络返回的error。进if后会在本地存储新建项目的信息。  
 这个地方的修改比较复杂，截图如下：  
 <p align="center">
 <img src="res/projectStores.jpg" alt="预览" width="700"/>
