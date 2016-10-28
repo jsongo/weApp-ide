@@ -75,11 +75,9 @@ init: function() {
 > 《[【微信小程序开发•系列文章二】视图层](http://www.jsongo.com/post/js/2016/weapp-2/)》  
 > 《[【微信小程序开发•系列文章三】数据层](http://www.jsongo.com/post/js/2016/weapp-3/)》  
 > 《[【微信小程序开发•系列文章四】模块化](http://www.jsongo.com/post/js/2016/weapp-4/)》  
+《[【微信小程序开发•系列文章五】主界面](http://www.jsongo.com/post/js/2016/weapp-5/)》  
 > 《[【微信小程序开发•系列文章六】生命周期和路由](http://www.jsongo.com/post/js/2016/weapp-6/)》    
 > 《[【微信小程序开发•系列文章七】websocket](http://www.jsongo.com/post/js/2016/weapp-7/)》  
-正在编写中的章节：  
-《【微信小程序开发•系列文章五】主界面》  
-《【微信小程序开发•系列文章八】常用组件》  
 
 
 **几个问题说明**  
@@ -101,3 +99,7 @@ init: function() {
 后续还会更新更多的api的破解方式，欢迎大家持续关注  
 
 更多的微信小程序api，可以参考原官方文档：https://mp.weixin.qq.com/debug/wxadoc/dev/api/open.html  
+新开了个微信交流群，有举的同学可以扫码进来交流：  
+<p align="center">
+<img src="res/wx-qun2.jpg" alt="预览" width="400"/>
+</p>
