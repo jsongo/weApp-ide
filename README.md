@@ -99,7 +99,7 @@ init: function() {
 后续还会更新更多的api的破解方式，欢迎大家持续关注  
 
 更多的微信小程序api，可以参考原官方文档：https://mp.weixin.qq.com/debug/wxadoc/dev/api/open.html  
-新开了个微信交流群，有举的同学可以扫码进来交流：  
+新开了个微信交流群，有兴趣的同学可以扫码进来交流：  
 <p align="center">
 <img src="res/wx-qun2.jpg" alt="预览" width="400"/>
 </p>
