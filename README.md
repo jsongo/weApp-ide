@@ -1,6 +1,7 @@
 ## 微信小程序的IDE用了reactjs + flux的架构  
 可以分析它的源码学习这套框架   
 破解方式：把相应的文件做个替换就行。  
+当前文件可破解版本：v0.10.102800  
 
 mac上：  
 找到开发工具的程序，右击“显示包内容”：  
@@ -15,14 +16,13 @@ window上：
 package.nw/app/dist/components/create/createstep.js  
 package.nw/app/dist/stores/projectStores.js  
 package.nw/app/dist/weapp/appservice/asdebug.js  
-如果觉得麻烦，而且你也正巧用的mac，可以直接下载我传到百度云上的软件直接使用：https://pan.baidu.com/s/1dEATgkx ，版本 v0.10.101400  
  
 破解的时候，把整个代码大概浏览了一遍，自己折腾了下。（因为之前写过react + flux的代码，所以对这个项目的结构非常熟悉。）   
 
 主要的修改，如果你有兴趣可以浏览下：  
 1、asdebug.js修改  
-（1）搜索“URL 域名不合法，请在 mp 后台配置后重试”  
-把这句代码前端的那个if改成if(false)就可以了  
+（1）搜索“域名”两个字，找到类似域名校验出错等字眼的那一个function
+把整个function内部的内容都注释掉，直接return true;    
 这个主要是为了去掉安全域名的限制  
 （2）搜索“URL 域名不合法，请在 mp 后台配置后，重启项目继续测试”
 跟上面一样，把前面if改成if(false)  
