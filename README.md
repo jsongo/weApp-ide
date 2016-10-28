@@ -1,6 +1,7 @@
 ## 微信小程序的IDE用了reactjs + flux的架构  
 可以分析它的源码学习这套框架   
 破解方式：把相应的文件做个替换就行。  
+当前文件可破解版本：v0.10.102800  
 
 mac上：  
 找到开发工具的程序，右击“显示包内容”：  
@@ -15,7 +16,6 @@ window上：
 package.nw/app/dist/components/create/createstep.js  
 package.nw/app/dist/stores/projectStores.js  
 package.nw/app/dist/weapp/appservice/asdebug.js  
-如果觉得麻烦，而且你也正巧用的mac，可以直接下载我传到百度云上的软件直接使用：https://pan.baidu.com/s/1dEATgkx ，版本 v0.10.101400  
  
 破解的时候，把整个代码大概浏览了一遍，自己折腾了下。（因为之前写过react + flux的代码，所以对这个项目的结构非常熟悉。）   
 
