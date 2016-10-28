@@ -21,8 +21,8 @@ package.nw/app/dist/weapp/appservice/asdebug.js
 
 主要的修改，如果你有兴趣可以浏览下：  
 1、asdebug.js修改  
-（1）搜索“URL 域名不合法，请在 mp 后台配置后重试”  
-把这句代码前端的那个if改成if(false)就可以了  
+（1）搜索“域名”两个字，找到类似域名校验出错等字眼的那一个function
+把整个function内部的内容都注释掉，直接return true;    
 这个主要是为了去掉安全域名的限制  
 （2）搜索“URL 域名不合法，请在 mp 后台配置后，重启项目继续测试”
 跟上面一样，把前面if改成if(false)  
