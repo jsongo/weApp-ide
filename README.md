@@ -8,7 +8,6 @@ mac上：
 Resources/app.nw/app/dist/components/create/createstep.js  
 Resources/app.nw/app/dist/stores/projectStores.js  
 Resources/app.nw/app/dist/weapp/appservice/asdebug.js  
-Resources/app.nw/app/dist/common/assdk/storageSdk.js  
 
 window上：  
 安装完后，一般是放在这个目录里：C:\Program Files (x86)\Tencent\微信web开发者工具  
